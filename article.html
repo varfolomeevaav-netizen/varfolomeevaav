@@ -108,6 +108,33 @@
   }
   ul.clean li b { font-weight:600; }
 
+  /* video CTA */
+  .video-cta {
+    margin:44px 0 8px;
+    padding:28px clamp(20px,4vw,32px);
+    background:var(--bg2);
+    border-radius:20px;
+    text-align:center;
+  }
+  .video-cta .vc-title {
+    font-family:var(--display); font-weight:500;
+    font-size:22px; line-height:1.2; letter-spacing:-0.16px;
+    margin:0 0 8px;
+  }
+  .video-cta .vc-sub {
+    font-size:15px; line-height:21px; letter-spacing:-0.2px;
+    color:var(--muted); margin:0 0 20px;
+  }
+  .video-cta a.vc-btn {
+    display:inline-flex; align-items:center; gap:10px;
+    background:var(--red); color:#fff; text-decoration:none;
+    font-family:var(--sys); font-weight:600; font-size:16px; letter-spacing:-0.2px;
+    padding:14px 26px; border-radius:14px;
+    transition:filter .15s ease;
+  }
+  .video-cta a.vc-btn:hover { filter:brightness(0.93); }
+  .video-cta a.vc-btn svg { width:18px; height:18px; flex:0 0 auto; }
+
   /* access steps */
   .steps { display:grid; gap:14px; margin:18px 0 8px; }
   .step {
@@ -207,6 +234,15 @@
     <li>Весь опрос и текст пуша обязательно проверяет редактор.</li>
     <li>Проверьте, что ID специалистов состоят из цифр, а не из букв.</li>
   </ul>
+
+  <div class="video-cta">
+    <p class="vc-title">Как создать уникальную ссылку</p>
+    <p class="vc-sub">Пошаговая видеоинструкция — как превратить обычную ссылку в персональную.</p>
+    <a class="vc-btn" href="https://drive.google.com/file/d/1F0gqqOn4lFwLVT81oO2X8WjQ4y7fAcUa/preview" target="_blank" rel="noopener noreferrer">
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 5v14l11-7L8 5z" fill="currentColor"/></svg>
+      Смотреть видеоинструкцию
+    </a>
+  </div>
 
 </article>
 </body>
