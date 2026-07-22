@@ -312,6 +312,20 @@
     if (map[id]) map[id].classList.add('active');
   }
 
+  // Force scroll on click — works inside iframes (Outline embed) where
+  // default anchor jumps are blocked.
+  links.forEach(function(a){
+    a.addEventListener('click', function(e){
+      var id = a.getAttribute('href').slice(1);
+      var sec = document.getElementById(id);
+      if (sec) {
+        e.preventDefault();
+        sec.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        setActive(id);
+      }
+    });
+  });
+
   if ('IntersectionObserver' in window) {
     var visible = {};
     var obs = new IntersectionObserver(function(entries){
