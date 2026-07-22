@@ -30,11 +30,14 @@
     -webkit-font-smoothing:antialiased;
   }
   .wrap {
-    max-width:760px;
+    max-width:1400px;
     margin:0 auto;
     background:var(--bg);
-    padding:clamp(28px,6vw,72px) clamp(20px,5vw,64px);
+    padding:clamp(28px,6vw,72px) clamp(20px,5vw,80px);
   }
+
+  /* keep running text at a comfortable reading width on wide screens */
+  .eyebrow { max-width:none; }
 
   /* eyebrow / brand */
   .eyebrow {
